@@ -1,5 +1,6 @@
-package model;
+package model.Test;
 
+import model.Operation;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 

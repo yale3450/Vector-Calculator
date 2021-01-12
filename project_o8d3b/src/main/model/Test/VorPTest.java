@@ -1,11 +1,12 @@
-package model;
+package model.Test;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import model.Point;
+import model.Vector;
+import model.VorP;
 import org.junit.jupiter.api.Test;
 
 import static java.lang.Math.sqrt;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VorPTest {
 

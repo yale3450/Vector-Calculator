@@ -1,12 +1,12 @@
 package ui;
 
+import Persistence.JsonReader;
+import Persistence.JsonWriter;
 import model.History;
 import model.Operation;
 import model.Vector;
-import persistence.JsonReader;
-import persistence.JsonWriter;
 import ui.DistanceCard.DistancePanel;
-import ui.VectorCard.ArgsPanel;
+import ui.VectorCard.ArgPanel;
 import ui.VectorCard.OpPanel;
 
 import javax.sound.sampled.AudioSystem;
@@ -28,7 +28,8 @@ public class GUI implements ActionListener {
 
     String result;
     History history = new History();
-    ArgsPanel argsPanel = new ArgsPanel();
+    ArgPanel argPanel1 = new ArgPanel();
+    ArgPanel argPanel2 = new ArgPanel();
     OpPanel opPanel = new OpPanel(this);
     DisplayPanel displayPanel = new DisplayPanel(this);
     DistancePanel distancePanel = new DistancePanel(this);
@@ -50,8 +51,9 @@ public class GUI implements ActionListener {
 
         //Create the "cards".
         JPanel card1 = new JPanel();
-
-        card1.add(argsPanel);
+        card1.setLayout(new GridLayout(1,3));
+        card1.add(argPanel1);
+        card1.add(argPanel2);
         card1.add(opPanel);
 
         JPanel card2 = new JPanel();
@@ -132,8 +134,8 @@ public class GUI implements ActionListener {
             result = Double.toString(distancePanel.findDistance());
             history.addHistory(distancePanel.getOp());
         } else {
-            Vector arg1 = argsPanel.getArg1();
-            Vector arg2 = argsPanel.getArg2();
+            Vector arg1 = argPanel1.getArg();
+            Vector arg2 = argPanel2.getArg();
             if (e.getSource() == opPanel.add) {
                 result = (Vector.add(arg1, arg2)).toString();
                 history.addHistory(new Operation(arg1.toString(), arg2.toString(), 1));
@@ -147,7 +149,6 @@ public class GUI implements ActionListener {
                 result = (Vector.crossProduct(arg1, arg2)).toString();
                 history.addHistory(new Operation(arg1.toString(), arg2.toString(), 4));
             } else if (e.getSource() == opPanel.length) {
-
                 result = Double.toString(arg1.getDistance());
                 history.addHistory(new Operation(arg1.toString(), "", 5));
             } else if (e.getSource() == displayPanel.save) {

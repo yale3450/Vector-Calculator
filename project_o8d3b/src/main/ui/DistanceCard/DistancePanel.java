@@ -49,7 +49,7 @@ public class DistancePanel extends JPanel {
     }
 
     public Operation getOp(){
-        return new Operation(argPanel1.getArg().toString(),"Distance to", argPanel2.getArg().toString());
+        return new Operation(argPanel1.getArg().toString(),argPanel2.getArg().toString(), "Distance to");
     }
 
 

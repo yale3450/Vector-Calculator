@@ -1,11 +1,13 @@
-package model;
+package model.Test;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import model.Line;
+import model.Plane;
+import model.Point;
+import model.Vector;
 import org.junit.jupiter.api.Test;
 
 import static java.lang.Math.sqrt;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FindDistanceObjectTest {
     @Test

@@ -2,11 +2,9 @@ package model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import persistence.Writable;
+import Persistence.Writable;
 
 import java.util.ArrayList;
-
-import static java.util.ArrayList.*;
 
 //A class made to store a list of operations, history can be saved and read as a json file//
 public class History implements Writable {

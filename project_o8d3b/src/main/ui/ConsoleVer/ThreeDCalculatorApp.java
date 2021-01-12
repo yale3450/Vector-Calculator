@@ -1,8 +1,8 @@
-package ui;
+package ui.ConsoleVer;
 
 import model.*;
-import persistence.JsonReader;
-import persistence.JsonWriter;
+import Persistence.JsonReader;
+import Persistence.JsonWriter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

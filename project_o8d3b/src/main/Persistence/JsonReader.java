@@ -1,4 +1,4 @@
-package persistence;
+package Persistence;
 
 import model.History;
 import model.Operation;
@@ -10,8 +10,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
-
-import static java.lang.Integer.parseInt;
 
 //Code based on json serialization provided in edx
 // Represents a reader that reads workroom from JSON data stored in file

@@ -1,7 +1,7 @@
 package model;
 
 import org.json.JSONObject;
-import persistence.Writable;
+import Persistence.Writable;
 
 //A set of thee strings containing the two arguments and operation//
 public class Operation implements Writable {
@@ -14,18 +14,19 @@ public class Operation implements Writable {
     public Operation(String arg1, String arg2, int opType) {
         this.arg1 = arg1;
         this.arg2 = arg2;
-        if (opType == 1) {
-            this.op = "+";
-        } else if (opType == 2) {
-            this.op = "-";
-        } else if (opType == 3) {
-            op = "•";
-        } else if (opType == 4) {
-            op = "x";
-        } else if (opType == 5) {
-            op = "Vector Length";
-        } else if (opType == 6) {
-            op = "Distance to";
+        switch (opType) {
+            case 1:
+                this.op = "+";
+            case 2:
+                this.op = "-";
+            case 3:
+                op = "•";
+            case 4:
+                op = "x";
+            case 5:
+                op = "Vector Length";
+            case 6:
+                op = "Distance to";
         }
     }
 
