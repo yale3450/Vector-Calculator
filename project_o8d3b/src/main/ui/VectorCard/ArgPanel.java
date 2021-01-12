@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 import static java.lang.Double.parseDouble;
-
+//Creates panel in UI that reads vector entered by user
 public class ArgPanel extends JPanel {
 
     JTextField xcoord = new JTextField("X Coordinate");
@@ -19,10 +19,9 @@ public class ArgPanel extends JPanel {
         add(xcoord);
         add(ycoord);
         add(zcoord);
-
-
     }
 
+    //returns vector input by user
     public model.Vector getArg() throws NumberFormatException {
         double cordX = parseDouble(xcoord.getText());
         double cordY = parseDouble(ycoord.getText());

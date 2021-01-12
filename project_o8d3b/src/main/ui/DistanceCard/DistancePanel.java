@@ -7,35 +7,30 @@ import ui.GUI;
 
 import javax.swing.*;
 import java.awt.*;
-
+//Panel that holds the argument panels and performs find distance calculations
 public class DistancePanel extends JPanel {
-
-    public JButton fdButton = new JButton("Find Distance");
     ArgPanel argPanel1 = new ArgPanel();
     ArgPanel argPanel2 = new ArgPanel();
-
+    //Button to perform calculation
+    public JButton fdButton = new JButton("Find Distance");
 
     public DistancePanel(GUI parent) {
         setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 
+        //Adds new argPanels
         JPanel input = new JPanel();
-
         input.add(argPanel1);
         input.add(new JPanel());
         input.add(argPanel2);
-
-
         add(input, BorderLayout.CENTER);
-        // JPanel buttonPanel = new JPanel();
 
+        //adds Find distance button
         fdButton.addActionListener(parent);
-        //  buttonPanel.add(fdButton);
         add(new JPanel());
         add(fdButton);
-
-
     }
 
+    //Performs calculations
     public double findDistance() {
         String argType = argPanel2.getArgType();
         switch (argType) {
@@ -48,6 +43,7 @@ public class DistancePanel extends JPanel {
         }
     }
 
+    //Getter, Returns operation
     public Operation getOp(){
         return new Operation(argPanel1.getArg().toString(),argPanel2.getArg().toString(), "Distance to");
     }

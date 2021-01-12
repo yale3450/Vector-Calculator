@@ -38,7 +38,6 @@ public class GUI implements ActionListener {
     //Constructor: creates JFrame and adds components
     public GUI() {
 
-
         //Frame//
         JFrame frame = new JFrame("3DCalculator");
         frame.setDefaultCloseOperation((JFrame.EXIT_ON_CLOSE));
@@ -49,13 +48,13 @@ public class GUI implements ActionListener {
 
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        //Create the "cards".
+        //Vector Card
         JPanel card1 = new JPanel();
         card1.setLayout(new GridLayout(1,3));
         card1.add(argPanel1);
         card1.add(argPanel2);
         card1.add(opPanel);
-
+        //Distance Card
         JPanel card2 = new JPanel();
         card2.add(distancePanel);
 

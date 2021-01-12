@@ -8,7 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-//THIS IS BASED ON TELLER APP PROVIDED IN LECTURE
 //3D calculator application
 public class ThreeDCalculatorApp {
 

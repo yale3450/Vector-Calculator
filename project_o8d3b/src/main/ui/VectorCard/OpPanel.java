@@ -5,8 +5,7 @@ import ui.GUI;
 import javax.swing.*;
 import java.awt.*;
 
-//EFFECTS: Makes operation panel
-
+//EFFECTS: Makes panel that allows users to choose their operation
 public class OpPanel extends JPanel  {
     //Components for operation panel
     public JButton add = new JButton("Add");
@@ -16,8 +15,6 @@ public class OpPanel extends JPanel  {
     public JButton length = new JButton("Find Vector Length");
 
     public OpPanel(GUI parent) {
-
-
         setLayout(new GridLayout(5, 1));
         add(add);
         add(subtract);

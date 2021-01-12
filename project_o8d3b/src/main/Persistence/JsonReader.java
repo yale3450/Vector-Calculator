@@ -11,7 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-//Code based on json serialization provided in edx
 // Represents a reader that reads workroom from JSON data stored in file
 public class JsonReader {
     private String source;

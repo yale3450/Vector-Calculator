@@ -2,7 +2,7 @@ package ui;
 
 import javax.swing.*;
 import java.awt.*;
-
+//Displays users last operation and history, allows save/load functionality
 public class DisplayPanel extends JPanel {
 
     public JTextField resultDisplay = new JTextField();
