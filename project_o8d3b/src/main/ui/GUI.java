@@ -22,7 +22,7 @@ import java.io.IOException;
 
 //The entire GUI is contained within this class
 public class GUI implements ActionListener {
-    private static final String JSON_STORE = "./data/history.json";
+    private static final String JSON_STORE = "./project_o8d3b/data/history.json";
     private JsonWriter jsonWriter = new JsonWriter(JSON_STORE);
     private JsonReader jsonReader = new JsonReader(JSON_STORE);
 
@@ -79,7 +79,7 @@ public class GUI implements ActionListener {
     //EFFECTS: plays sound of choice when a button is clicked
     private void playSound() {
         try {
-            File file = new File("./data/itslit.wav");
+            File file = new File("./project_o8d3b/data/button-3.wav");
             Clip clip = AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(file));
             clip.start();
